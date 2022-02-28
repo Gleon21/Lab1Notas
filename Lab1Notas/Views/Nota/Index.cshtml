@@ -1,0 +1,69 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1><b>Registro de notas</b></h1>
+
+<content class="box1">
+    <div class="box2">
+        <form asp-controller="Nota" asp-action="Index">
+            <label>Nombre del alumno</label>
+            <input type="text" name="Alumno" placeholder="Nombre" />
+
+            <label>Laboratorio1</label>
+            <input type="number" max="10" min="0" name="Datal1" placeholder="lab1" />
+
+            <label>Parcial1</label>
+            <input type="number" max="10" min="0" name="Datap1" placeholder="par1" />
+
+            <label>Laboratorio2</label>
+            <input type="number" max="10" min="0" name="Datal2" placeholder="lab2" />
+
+            <label>Parcial2</label>
+            <input type="number" max="10" min="0" name="Datap2" placeholder="par2" />
+
+            <label>Laboratorio3</label>
+            <input type="number" max="10" min="0" name="Datal3" placeholder="lab3" />
+
+            <label>parcial3</label>
+            <input type="number" max="10" min="0" name="Datap3" placeholder="par3" />
+
+            <input type="submit" />
+        </form>
+       
+        @if (ViewBag.Alumno !=null)
+            {
+
+                <div class="boxn">
+                    <div class="result">
+                        <label>Alumno: </label>
+                        <label>@ViewBag.Alumno</label>
+                    </div>
+
+                    <div class="result">
+                        <label>Periodo  1: </label>
+                        <label> Laboratorio 1 : <b class="NF">@ViewBag.l1</b></label>
+                        <label> Parcial 1 :<b class="NF"> @ViewBag.p1</b></label>
+                    </div>
+
+                    <div class="result">
+                        <label>Periodo  2: </label>
+                        <label> Laboratorio 2 :<b class="NF"> @ViewBag.l2</b></label>
+                        <label> Parcial 2 :<b class="NF"> @ViewBag.p2</b></label>
+                    </div>
+
+                    <div class="result">
+                        <label>Periodo  3:  </label>
+                        <label> Laboratorio 3 :<b class="NF"> @ViewBag.l1</b></label>
+                        <label> Parcial 3 :<b class="NF"> @ViewBag.p1</b></label>
+                    </div>
+
+                    <div class="result">
+                        <label>Nota Final: </label>
+                        <label>@ViewBag.NotaFinal</label>
+                    </div>
+                </div>
+            } 
+    </div>
+</content>
